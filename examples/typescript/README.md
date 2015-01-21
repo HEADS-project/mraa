@@ -1,6 +1,4 @@
-Use the following command to compile your typescript
-
-Install the node.d.ts
+First Iinstall the node.d.ts
 ```bash
 npm install tsd -g) 
 ```
@@ -10,18 +8,21 @@ tsd query node -a install
 ```
 
 
+Use the following command to compile your typescript:
 ```bash
 tsc --module commonjs AioA0.ts
 ```
-next you can do 
+
+next you can install mraa in this folder:
 ```bash
 npm install mraa 
 ```
-to install mraa in this folder. 
 
-next you can run 
-
+finally you can run the samples *e.g.* AioA0:
 ```bash
 sudo node AioA0.js
 ```
+
+
+
 

@@ -67,3 +67,9 @@ There is no explicit nodejs API documentation, see the examples. The API itself
 is very similar to the python one but with a js syntax. If you know of an
 autodoc tool for generating nodejs APIs from a native C++ nodejs extension
 please get in touch!
+
+TypeScript API documentation
+===========
+
+There is no explicit typescript API documentation, [see the examples](https://github.com/HEADS-project/mraa/tree/master/examples/typescript). The API itself
+is very similar to the nodejs one (itself quite similar to the python one) but with a typescript syntax.
