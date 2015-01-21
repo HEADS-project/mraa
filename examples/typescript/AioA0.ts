@@ -1,4 +1,4 @@
-///<reference path='../../src/typescript/node.d.ts' />
+///<reference path='typings/node/node.d.ts' />
 ///<reference path='../../src/typescript/mraa.d.ts' />
 
 /*

@@ -1,4 +1,4 @@
-///<reference path='../../src/typescript/node.d.ts' />
+///<reference path='typings/node/node.d.ts' />
 ///<reference path='../../src/typescript/mraa.d.ts' />
 
 /*
@@ -31,8 +31,8 @@ var m = require('mraa'); //require mraa
 // helper function to go from hex val to dec
 function char(x) { return parseInt(x, 16); }
 
-var x = new m.I2c(0);
-x.address('0x77');
+var x = new m.I2c(0)
+x.address(0x77)
 
 // initialise device
 if (x.readReg(char('0xd0')) != char('0x55')) {
@@ -55,3 +55,4 @@ x.write(buf)
 
 x.writeByte(char('0xf6'))
 var d = x.read(2)
+
