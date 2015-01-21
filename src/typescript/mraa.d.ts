@@ -1,3 +1,6 @@
+///<reference path='../../examples/typescript/typings/node/node.d.ts' />
+
+
 /**
  * Created by barais on 20/01/15.
  */
@@ -294,7 +297,7 @@ declare module "mraa" {
              * @param length Size of read in bytes to make
              * @return length of read, should match length
              */
-            read(data:number, length:number):number;
+            read(data:Buffer):number;
 
             /**
              * Read byte from an i2c register
@@ -318,7 +321,7 @@ declare module "mraa" {
              * @param data The byte to send on the bus
              * @return Result of operation
              */
-            writeByte(data:number):mraa_result_t ;
+            writeByte(data:Buffer):mraa_result_t ;
 
             /**
              * Write length bytes to the bus, the first byte in the array is the
@@ -328,7 +331,7 @@ declare module "mraa" {
              * @param length Size of buffer to send
              * @return Result of operation
              */
-            write(data:number, length:number):mraa_result_t;
+            write(buffer:Buffer):mraa_result_t;
 
             /**
              * Write a byte to an i2c register
@@ -337,7 +340,7 @@ declare module "mraa" {
              * @param data Value to write to register
              * @return Result of operation
              */
-            writeReg(reg:number, data:number):mraa_result_t ;
+            writeReg(reg:number, data:Buffer):mraa_result_t ;
 
             /**
              * Write a word to an i2c register
@@ -346,7 +349,7 @@ declare module "mraa" {
              * @param data Value to write to register
              * @return Result of operation
              */
-            writeWordReg(reg:number, data:number):mraa_result_t ;
+            writeWordReg(reg:number, data:Buffer):mraa_result_t ;
         }
 
         export class Pwm {
@@ -480,7 +483,7 @@ declare module "mraa" {
              * @param data the byte to send
              * @return data received on the miso line
              */
-            writeByte(data:number):number ;
+            writeByte(data:Buffer):number ;
 
             /**
              * Write buffer of bytes to SPI device The pointer return has to be
@@ -491,7 +494,7 @@ declare module "mraa" {
              * @param length size of buffer to send
              * @return uint8_t* data received on the miso line. Same length as passed in
              */
-            write(txBuf:number, length:number):number;
+            write(txBuf:Buffer):number;
 
             /**
              * Transfer data to and from SPI device Receive pointer may be null if
@@ -502,7 +505,7 @@ declare module "mraa" {
              * @param length size of buffer to send
              * @return Result of operation
              */
-            transfer(txBuf:number, rxBuf:number, length:number):mraa_result_t;
+            transfer(txBuf:Buffer, rxBuf:Buffer):mraa_result_t;
 
             /**
              * Change the SPI lsb mode
@@ -540,4 +543,3 @@ declare module "mraa" {
     }
     export = mraa;
 }
-
