@@ -1,5 +1,5 @@
 ///<reference path='../../examples/typescript/typings/node/node.d.ts' />
-
+ 
 /**
      * Created by barais on 20/01/15.
      */
